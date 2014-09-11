@@ -88,7 +88,7 @@ $(document).ready(function () {
     footer = {
         items: [
             'Elsewhere on the web at <a href="https://github.com/tstapleton">GitHub</a>, <a href="http://www.linkedin.com/in/thomasstapleton">LinkedIn</a>, <a href="https://twitter.com/thomasstapleton">Twitter</a>, and <a href="https://alpha.app.net/tstapleton">App.net</a>.',
-            'Kicking it old school?  Here\'s a PDF version of my <a href="/files/Tom-Stapleton-Resume.pdf">resume</a>.',
+            'Kicking it old school?  Here\'s a PDF version of my <a href="/personal-site/files/Tom-Stapleton-Resume.pdf">resume</a>.',
             'Built with the <a href="http://fluidbaselinegrid.com/">Fluid Baseline Grid</a>, icons from <a href="http://pictos.cc/">Pictos</a>, and the <a href="http://www.google.com/webfonts/specimen/Lato">Lato</a> font family.  Site hosted at <a href="http://macminicolo.net/">Mac Mini Colo</a> and source code available at <a href="https://github.com/tstapleton/personal-site">GitHub</a>.'
         ]
     };
@@ -226,7 +226,7 @@ $(document).ready(function () {
                         more: true,
                         details: [
                             'I built this website to highlight my accomplishments in a more interesting way than a traditional resume',
-                            '<a href="/project">Learn more</a> about how I am using the project as an opportunity to learn about new ideas in web design and demonstrate a bit about how I solve problems',
+                            '<a href="/personal-site/project">Learn more</a> about how I am using the project as an opportunity to learn about new ideas in web design and demonstrate a bit about how I solve problems',
                             'All source code is available on <a href="https://github.com/tstapleton/personal-site">GitHub</a>'
                         ]
                     },
@@ -464,29 +464,29 @@ $(document).ready(function () {
         footer: footer
     };
 
-    $.get('../template/experience.html', function (template) {
+    $.get('template/experience.html', function (template) {
         html = Mustache.to_html(template, data);
         $('#experience').html(html);
         $('.separator hr').css('opacity', 1);
     });
 
-    $.get('../template/footer.html', function (template) {
+    $.get('template/footer.html', function (template) {
         html = Mustache.to_html(template, data);
         $('footer').html(html);
     });
 
-    $.get('../template/header.html', function (template) {
+    $.get('template/header.html', function (template) {
         html = Mustache.to_html(template, data);
         $('header').html(html);
     });
 
-    $.get('../template/summary.html', function (template) {
+    $.get('template/summary.html', function (template) {
         html = Mustache.to_html(template, data);
         $('#summary').html(html);
         $('.separator hr').css('opacity', 1);
     });
 
-    $.get('../template/toc.html', function (template) {
+    $.get('template/toc.html', function (template) {
         html = Mustache.to_html(template, data);
         $('#toc').html(html);
         $('.separator hr').css('opacity', 1);
